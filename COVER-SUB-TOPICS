@@ -1,1 +1,650 @@
+package Arr;
 
+public class Swap_Two_Numbers {
+
+	public static void main(String[] args) { 
+		int a = 5, b = 10; 
+		a = a + b; 
+		b = a - b; 
+		a = a - b; 
+		System.out.println("a: " + a + ", b: " + b); 
+		} 
+		} 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Arr;
+
+import java.util.Arrays;
+
+public class SortanArray {
+
+
+		public static void main(String[] args) { 
+		int[] arr = {5, 2, 8, 1, 3}; 
+		Arrays.sort(arr); 
+		System.out.println(Arrays.toString(arr)); 
+		} 
+		}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Arr;
+public class Reverse_number {
+
+	public static void main(String[] args) { 
+		int num = 12345, reversed = 0; 
+		while (num != 0) { 
+		reversed = reversed * 10 + num % 10; 
+		num /= 10; 
+		} 
+		System.out.println(reversed); 
+		} 
+		}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Arr;
+public class ReverseString { 
+public static void main(String[] args) { 
+String str = "Automation"; 
+StringBuilder reversed = new StringBuilder(str).reverse(); 
+System.out.println(reversed); 
+} 
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+package Arr;
+
+public class Reverse_number {
+
+	public static void main(String[] args) { 
+		int num = 12345, reversed = 0; 
+		while (num != 0) { 
+		reversed = reversed * 10 + num % 10; 
+		num /= 10; 
+		} 
+		System.out.println(reversed); 
+		} 
+		}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Arr;
+
+import java.util.HashSet;
+
+public class RemoveDuplicatesfromanArray {
+
+	public static void main(String[] args) { 
+		int[] arr = {1, 2, 2, 3, 4, 4}; 
+		HashSet<Integer> set = new HashSet<>(); 
+		for (int num : arr) { 
+		set.add(num); 
+		} 
+		System.out.println(set); 
+		} 
+		}
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Arr;
+
+public class RemoveAllWhitespacesfromaString {
+
+	public static void main(String[] args) { 
+		String str = " A u t o m a t i o n "; 
+		String result = str.replaceAll("\\s+", ""); 
+		System.out.println(result); 
+		} 
+		} 
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+package Arr;
+
+public class Print_the_Prime_Numbers_in_a_Range {
+
+	public static void main(String[] args) { 
+		int start = 10, end = 50; 
+		for (int num = start; num <= end; num++) { 
+		boolean isPrime = true; 
+		for (int i = 2; i <= Math.sqrt(num); i++) { 
+		if (num % i == 0) { 
+		isPrime = false; 
+		break; 
+		} 
+		} 
+		if (isPrime && num > 1) { 
+		System.out.print(num + " "); 
+		} 
+		} 
+		} 
+		} 
+--------------------------------------------------------------------------------------------------
+package Arr;
+
+public class Print_the_Pascal_riangle {
+
+	public static void main(String[] args) { 
+		int rows = 5; 
+		for (int i = 0; i < rows; i++) { 
+		int num = 1; 
+		System.out.format("%" + (rows - i) * 2 + "s", ""); 
+		for (int j = 0; j <= i; j++) { 
+		System.out.format("%4d", num); 
+		num = num * (i - j) / (j + 1); 
+		} 
+		System.out.println(); 
+		} 
+	}}
+
+-----------------------------------------------------------------------
+
+package Arr;
+
+public class PrimeCheck { 
+public static void main(String[] args) { 
+int num = 11; 
+boolean isPrime = true; 
+for (int i = 2; i <= Math.sqrt(num); i++) { 
+if (num % i == 0) { 
+isPrime = false; 
+break; 
+} 
+} 
+System.out.println(isPrime); 
+} 
+}
+----------------------------------------------------------------------------
+package Arr;
+
+import java.util.Arrays;
+
+public class MergeTwoArrays {
+
+
+		public static void main(String[] args) { 
+		int[] arr1 = {1, 3, 5}; 
+		int[] arr2 = {2, 4, 6}; 
+		int[] merged = new int[arr1.length + arr2.length]; 
+		System.arraycopy(arr1, 0, merged, 0, arr1.length); 
+		System.arraycopy(arr2, 0, merged, arr1.length, arr2.length); 
+		System.out.println(Arrays.toString(merged)); 
+		} 
+		} 
+		
+--------------------------------------------------------------
+
+package Arr;
+
+import java.util.Scanner;
+
+public class Implementing_Simple_Calculator {
+	public static void main(String[] args) { 
+		Scanner scanner = new Scanner(System.in); 
+		System.out.print("Enter first number: "); 
+		double num1 = scanner.nextDouble(); 
+		System.out.print("Enter second number: "); 
+		double num2 = scanner.nextDouble(); 
+		System.out.print("Enter operation (+, -, *, /): "); 
+		char operation = scanner.next().charAt(0); 
+		double result; 
+		switch (operation) { 
+		case '+': result = num1 + num2; break; 
+		case '-': result = num1 - num2; break; 
+		case '*': result = num1 * num2; break; 
+		case '/': result = num1 / num2; break; 
+		default: throw new IllegalArgumentException("Invalid operation"); 
+		} 
+		System.out.println("Result: " + result); 
+		} 
+		} 
+
+------------------------------------------------------------------------------------
+
+package Arr;
+
+public class Implementing_Selection_Sort {
+
+	public static void main(String[] args) { 
+		int[] arr = {64, 25, 12, 22, 11}; 
+		int n = arr.length; 
+		for (int i =  ; i < n - 1; i++) { 
+		int minIndex = i; 
+		for (int j = i + 1; j < n; j++) { 
+		if (arr[j] < arr[minIndex]) { 
+		minIndex = j; 
+		} 
+		} 
+		int temp = arr[minIndex]; 
+		arr[minIndex] = arr[i]; 
+		arr[i] = temp; 
+		} 
+		for (int num : arr) { 
+		System.out.print(num + " "); 
+		} 
+		} 
+		} 
+
+---------------------------------------------------
+package Arr;
+
+public class Implementing_Bubble_Sort {
+
+	
+	public static void main(String[] args) { 
+		int[] arr = {64, 34, 25, 12, 22, 11, 90}; 
+		int n = arr.length; 
+		for (int i = 0; i < n - 1; i++) { 
+		for (int j = 0; j < n - i - 1; j++) { 
+		if (arr[j] > arr[j + 1]) { 
+		int temp = arr[j]; 
+		arr[j] = arr[j + 1]; 
+		arr[j + 1] = temp; 
+		} 
+		} 
+		} 
+		for (int num : arr) { 
+		System.out.print(num + " "); 
+		} 
+		} 
+		} 
+-------------------------------------------------------
+
+package Arr;
+import java.util.Scanner; 
+public class Implement_a_Simple_Login_System {
+
+	public static void main(String[] args) { 
+		String username = "admin"; 
+		String password = "password"; 
+		Scanner scanner = new Scanner(System.in); 
+		System.out.print("Enter username: "); 
+		String inputUsername = scanner.nextLine(); 
+		System.out.print("Enter password: "); 
+		String inputPassword = scanner.nextLine(); 
+		if (username.equals(inputUsername) && password.equals(inputPassword)) { 
+		System.out.println("Login successful!"); 
+		} else { 
+		System.out.println("Login failed!"); 
+		} 
+		} 
+		} 
+-----------------------------------------------
+
+package Arr;
+import java.util.Random; 
+public class Generate_Random_Numbers {
+
+	public static void main(String[] args) { 
+		Random random = new Random(); 
+		for (int i = 0; i < 5; i++) { 
+		System.out.println(random.nextInt(100)); // Random number between 0-99 
+		} 
+		} 
+		} 
+
+--------------------------------------------------------------
+
+ 	package Arr;
+
+public class FindtheLargestElementinanArray {
+
+
+		public static void main(String[] args) { 
+		int[] arr = {1, 3, 5, 7, 9}; 
+		int largest = arr[0]; 
+		for (int num : arr) { 
+		if (num > largest) { 
+		largest = num; 
+		} 
+		} 
+		System.out.println(largest); 
+		} 
+		}
+	----------------------------------------------------
+
+package Arr;
+
+public class Find_the_Sum_of_First_N_Natural_Numbers {
+
+	public static void main(String[] args) { 
+		int n = 10, sum = n * (n + 1) / 2; 
+		System.out.println(sum); 
+		} 
+		} 
+--------------------------------------------------------
+
+package Arr;
+
+public class Find_the_Sum_Digits_Number {
+
+	public class SumOfDigits { 
+		public static void main(String[] args) { 
+		int num = 12345, sum = 0; 
+		while (num != 0) { 
+		sum += num % 10; 
+		num /= 10; 
+		} 
+		System.out.println(sum); 
+		} 
+		}}
+---------------------------------------------------------
+
+package Arr;
+
+public class Find_the_Second_Largest_Element_in_an_Array {
+
+	public static void main(String[] args) { 
+		int[] arr = {12, 35, 1, 10, 34, 1}; 
+		int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE; 
+		for (int num : arr) { 
+		if (num > first) { 
+		second = first; 
+		first = num; 
+		} else if (num > second && num != first) { 
+		second = num; 
+		} 
+		} 
+		System.out.println(second); 
+		} 
+		} 
+
+-----------------------------------------------------------------
+
+package Arr;
+
+public class Find_the_Missing_Number_in_an_Array {
+
+	public static void main(String[] args) { 
+		int[] arr = {1, 2, 4, 5, 6}; 
+		int n = arr.length + 1; 
+		int total = n * (n + 1) / 2; 
+		for (int num : arr) { 
+		total -= num; 
+		} 
+		System.out.println(total); 
+		} 
+		} 
+
+-------------------------------------------------------------
+package Arr;
+import java.util.HashMap;
+class Find_the_Maximum_Occurring_Character_String {
+	 
+	public static void main(String[] args) { 
+		String str = "programming"; 
+		HashMap<Character, Integer> charCount = new HashMap<>(); 
+		for (char c : str.toCharArray()) { 
+		charCount.put(c, charCount.getOrDefault(c, 0) + 1); 
+		} 
+		char maxChar = str.charAt(0); 
+		int maxCount = 0; 
+		for (char c : charCount.keySet()) { 
+		if (charCount.get(c) > maxCount) { 
+		maxCount = charCount.get(c); 
+		maxChar = c; 
+		} 
+		} 
+		System.out.println(maxChar); 
+		} 
+		} 
+---------------------------------------------------------------------------
+
+
+package Arr;
+
+public class Find_the_Length_of_a_String {
+
+	public static void main(String[] args) { 
+		String str = "Automation"; 
+		System.out.println(str.length()); 
+		} 
+		} 
+
+---------------------------------------------------------------------
+
+package Arr;
+import java.util.LinkedHashMap; 
+import java.util.Map; 
+public class Find_the_First_Non_Repeated_Characte_in_a_String {
+
+	public static void main(String[] args) { 
+		String str = "swiss"; 
+		Map<Character, Integer> charCount = new LinkedHashMap<>(); 
+		for (char c : str.toCharArray()) { 
+		charCount.put(c, charCount.getOrDefault(c, 0) + 1); 
+		} 
+		for (Map.Entry<Character, Integer> entry : charCount.entrySet()) { 
+		if (entry.getValue() == 1) { 
+		System.out.println(entry.getKey()); 
+		break; 
+		} 
+		} 
+		} 
+		} 
+
+-------------------------------------------------------------------------------
+	package Arr;
+	import java.util.HashSet; 
+public class Find_the_Common_Elements_in_Two_Arrays {
+
+
+	public static void main(String[] args) { 
+		int[] arr1 = {1, 2, 3, 4}; 
+		int[] arr2 = {3, 4, 5, 6}; 
+		HashSet<Integer> set = new HashSet<>(); 
+		for (int num : arr1) { 
+		set.add(num); 
+		} 
+		for (int num : arr2) { 
+		if (set.contains(num)) { 
+		System.out.print(num + " "); 
+		} 
+		} 
+		} 
+		} 
+
+
+-------------------------------------------------------------------------------------------
+
+package Arr;
+
+public class FibonacciSeries {
+
+	public static void main(String[] args) {
+		int n=10,num1=0,num2=1;
+		System.out.println("Fibonacci Series:"+num1+","+num2);
+		for(int i=2;i<n;i++) {
+			int num3=num1+num2;
+			System.out.println(","+num3);
+			num1=num2;
+			num2=num3;
+			
+		}
+
+	}
+
+}
+--------------------------------------------------------------------------------------
+
+package Arr;
+
+public class FactorialNumber { 
+public static void main(String[] args) { 
+int num = 5, factorial = 1; 
+for (int i = 1; i <= num; i++) { 
+factorial *= i; 
+} 
+System.out.println(factorial); 
+} 
+}
+//5!=5*4*3*2*1=120
+-------=========================================================================================
+
+package Arr;
+
+public class CountVowelsandConsonants {
+
+	
+		public static void main(String[] args) { 
+		String str = "Automation"; //['A','u',..]
+		int vowels = 0, consonants = 0; 
+		for (char c : str.toCharArray()) { 
+		if ("aeiouAEIOU".indexOf(c) != -1) { 
+		vowels++; 
+		} else if (Character.isLetter(c)) { 
+		consonants++; 
+		} 
+		} 
+		System.out.println("Vowels: " + vowels + ", Consonants: " + consonants); 
+		} 
+		} 
+===============================================================================================================
+
+package Arr;
+
+public class Count_the_Occurrences_of_a_Character_in_a_String {
+
+	public static void main(String[] args) { 
+		String str = "Automation"; 
+		char ch = 'a'; 
+		int count = 0; 
+		for (char c : str.toCharArray()) { 
+		if (c == ch) count++; 
+		} 
+		System.out.println(count); 
+		} 
+		}
+===================================================================================================================
+
+
+package Arr;
+
+public class Count_the_Number_of_Digits_in_a_Number {
+
+	public static void main(String[] args) { 
+		int num = 12345; 
+		int count = String.valueOf(num).length(); 
+		System.out.println(count); 
+		} 
+		} 
+===========================================================================================================================
+package Arr;
+
+public class Convert_Decimal_to_Binary {
+
+	public static void main(String[] args) { 
+		int num = 10; 
+		String binary = Integer.toBinaryString(num); 
+		System.out.println(binary); 
+		} 
+		} 
+
+-===========================================================================================================================
+
+package Arr;
+
+public class CheckifaNumberArmstrong {
+
+	public static void main(String[] args) { 
+		int num = 153, sum = 0, temp = num; 
+		while (temp != 0) { 
+		int digit = temp % 10; 
+		sum += Math.pow(digit, 3); 
+		temp /= 10; 
+		} 
+		System.out.println(num == sum); 
+		} 
+		} 
+=================================================================================================================
+
+package Arr;
+
+public class CheckForPalindrome {
+
+	public static void main(String[] args) {
+	
+		
+		String reversed=new StringBuilder(str).reverse().toString();
+		System.out.println(str.equals(reversed));
+
+	}
+
+}
+
+
+
+=========================================================================================================
+
+package Arr;
+
+public class Check_if_a_Year_is_Leap_Year {
+
+	public static void main(String[] args) { 
+		int year = 2024; 
+		boolean isLeap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0); 
+		System.out.println(isLeap); 
+		} 
+		}
+===========================================================================================================
+package Arr;
+
+public class Check_if_a_String_is_Empty {
+
+	public static void main(String[] args) { 
+		String str = ""; 
+		System.out.println(str.isEmpty()); 
+		} 
+		} 
+=========================================================================================================
+
+package Arr;
+
+public class Check_if_a_String_Contains_Another_String {
+
+	public static void main(String[] args) { 
+		String str1 = "Automation Testing"; 
+		String str2 = "Testing"; 
+		System.out.println(str1.contains(str2)); 
+		} 
+		} 
+=================================================================================================
+package Arr;
+
+public class Check_for_Perfect_Number {
+
+	public static void main(String[] args) { 
+		int num = 28, sum = 0; 
+		for (int i = 1; i <= num / 2; i++) { 
+		if (num % i == 0) { 
+		sum += i; 
+		} 
+		} 
+		System.out.println(num == sum); 
+		} 
+		}
+================================================================================================
+
+package Arr;
+
+import java.util.Arrays;
+
+public class Check_for_Anagram {
+
+	public static void main(String[] args) { 
+		String str1 = "listen", str2 = "silent"; 
+		char[] arr1 = str1.toCharArray(); 
+		char[] arr2 = str2.toCharArray(); 
+		Arrays.sort(arr1); 
+		Arrays.sort(arr2); 
+		System.out.println(Arrays.equals(arr1, arr2)); 
+		} 
+		} 
+=================================================================================================
+
+package Arr;
+
+public class CalculateGCDofTwoNumbers {
+
+	public static void main(String[] args) { 
+		int a = 24, b = 48; 
+		while (b != 0) { 
+		int temp = b; 
+		b = a % b; 
+		a = temp; 
+		} 
+		System.out.println(a); 
+		} 
+		} 
+
+===========================================================================================
